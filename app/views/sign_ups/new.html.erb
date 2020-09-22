@@ -1,0 +1,19 @@
+<h1>Sign Up!</h1>
+
+<ul>
+<%= form_for @sign_up do |f| %>
+  <li><%= f.label :camper %>
+  <%= f.collection_select :camper_id, Camper.all, :id, :name%></li>
+  <br>
+  <li> <%= f.label :activity %>
+  <%= f.collection_select :activity_id, Activity.all, :id, :name %>
+  </li>
+  <br>
+  <li><%= f.label :time %>
+  <%= f.time_select :time, {minute_step: 15} %>
+  </li>
+  <br>
+  <%= f.submit "SIGN UP"%>
+<% end %></ul>
+
+
