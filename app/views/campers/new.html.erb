@@ -1,0 +1,16 @@
+<h1>New Camper</h1>
+
+<% if flash[:new_errors]%>
+  <% flash[:new_errors].each do |e| %>
+    <p> <%= e %> </p>
+  <% end %>
+<% end %>
+
+<ul>
+<%= form_for @camper do |f| %>
+  <li> <%= f.label :name %> 
+  <%= f.text_field :name %>  </li><br>
+  <li> <%= f.label :age %> 
+  <%= f.number_field :age %>  </li><br>
+  <li> <%= f.submit %> </li>
+<% end %></ul>

@@ -17,6 +17,7 @@ Camper.create(name: 'Amanda',age: 9)
 Camper.create(name: 'Nick',age: 12)
 
 
+
 Activity.create(name: 'Archery', difficulty: 2)
 Activity.create(name: 'Swimming', difficulty: 3)
 Activity.create(name: 'Photography', difficulty: 2)
