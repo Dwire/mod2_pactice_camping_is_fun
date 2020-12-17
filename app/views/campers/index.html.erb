@@ -2,6 +2,8 @@
 
 <ul>
   <% @campers.each do |camper| %>
-    <li><%= camper.name %></li>
+    <li><%= link_to camper.name, camper_path(camper) %></li>
+    <%= button_to 'X', camper_path(camper), method: :delete %>
+                    
   <% end %>
 </ul>
